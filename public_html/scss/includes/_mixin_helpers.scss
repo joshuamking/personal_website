@@ -1,0 +1,19 @@
+$providers : ("o", "ms", "moz", "webkit");
+
+@mixin prefix($props, $prefixes: ()) {
+	@each $property, $value in $props {
+		#{$property}: $value;
+
+		@each $prefix in $prefixes {
+			#{'-' + $prefix + '-' + $property}: $value;
+		}
+	}
+}
+
+@mixin providers($prop_list) {
+	@include prefix($prop_list, $providers)
+}
+
+@mixin filter($value) {
+	@include providers((filter : $value))
+}

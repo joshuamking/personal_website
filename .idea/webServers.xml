@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="206170ee-10be-44c7-86c7-dbca1181565d" name="GSUCodd" url="http://codd.cs.gsu.edu">
+        <fileTransfer host="codd.cs.gsu.edu" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/home/jking82" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" muteSftpMessages="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

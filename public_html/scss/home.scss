@@ -1,0 +1,92 @@
+@import "includes/base";
+
+html {
+	font-family : 'Roboto', sans-serif;
+	min-height  : 150vh;
+	min-width   : 520px;
+
+	body#home-page {
+		min-height : 150vh;
+		@include providers((background-color : #000000));
+
+		#home-landing-view {
+			align-items     : center;
+			color           : #FFFFFF;
+			display         : flex;
+			flex-direction  : column;
+			justify-content : center;
+
+			.page-title {
+				#profile-photo {
+					animation-name         : profile-photo-fadeIn, fadeIn-el;
+					-moz-animation-name    : profile-photo-fadeIn, fadeIn-el;
+					-o-animation-name      : profile-photo-fadeIn, fadeIn-el;
+					-webkit-animation-name : profile-photo-fadeIn, fadeIn-el;
+
+					height                 : 15vw;
+
+					min-height             : 100px;
+					min-width              : 100px;
+					opacity                : 0;
+					width                  : 15vw;
+
+					@include round()
+				}
+			}
+
+			#home-landing-view-bkg {
+				animation-name         : bkg-photo-blur, fadeIn-el;
+				-moz-animation-name    : bkg-photo-blur, fadeIn-el;
+				-o-animation-name      : bkg-photo-blur, fadeIn-el;
+				-webkit-animation-name : bkg-photo-blur, fadeIn-el;
+				display                : block;
+				height                 : 100vh;
+
+				@include providers((
+						animation-duration : 2s,
+				));
+				position               : fixed;
+				top                    : 0;
+				width                  : 100vw;
+				z-index                : -1;
+
+				@include providers((
+						background : url("../img/bkg1.jpg"),
+						background-size : cover
+				));
+			}
+		}
+
+		.section {
+			height : 100vh;
+			width  : 100vw;
+			&#section-1 {
+				$shadow-size : 150px;
+				background : #FFFFFF;
+				margin-top : $shadow-size * 2;
+				@include box-shadow(0px, 0px, $shadow-size * 80 / 3, #FFFFFF, $shadow-size)
+			}
+		}
+	}
+}
+
+@keyframes bkg-photo-blur {
+	0% {
+		@include blur(0);
+	}
+	50% {
+		@include blur(0);
+	}
+	100% {
+		@include blur(10px);
+	}
+}
+
+@keyframes profile-photo-fadeIn {
+	0% {
+		@include providers((box-shadow:none));
+	}
+	100% {
+		@include providers((box-shadow:0px 0px 1000px rgba(255, 255, 255, 0.5)));
+	}
+}

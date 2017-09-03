@@ -1,0 +1,77 @@
+@import "mixins";
+
+$slideUp-height : 100px;
+html {
+	body {
+		@keyframes slideUp-after {
+			0% {
+				margin-bottom : $slideUp-height;
+				margin-top    : $slideUp-height;
+			}
+			100% {
+				margin-bottom : 0;
+				margin-top    : 0;
+			}
+		}
+
+		@keyframes fadeIn-el {
+			0% {
+			}
+			100% {
+				opacity : 1;
+			}
+		}
+
+		.anim-delay-sm {
+			@include providers((
+					animation-delay: 1s
+			));
+		}
+
+		.anim-delay-md {
+			@include providers((
+					animation-delay: 2s
+			));
+		}
+
+		.anim-delay-lg {
+			@include providers((
+					animation-delay: 3s
+			));
+		}
+
+		.anim {
+			@include providers((
+					animation-duration : 1s,
+					animation-fill-mode : forwards
+			));
+		}
+
+		.fade-in {
+			@extend .anim;
+			opacity : 0;
+			@include providers((
+					animation-name : fadeIn-el
+			));
+		}
+
+		.slide-up {
+			@extend .anim;
+
+			&:before {
+				animation-delay : inherit;
+				@extend .anim;
+				content         : '';
+
+				@include providers((
+						animation-name : slideUp-after
+				));
+
+				display         : block;
+				margin-bottom   : 0;
+				margin-top      : $slideUp-height;
+				opacity         : 0;
+			}
+		}
+	}
+}
