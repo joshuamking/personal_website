@@ -1,0 +1,17 @@
+$x-sm : 320px;
+$sm : 540px;
+$md : 720px;
+$lg : 1024px;
+$x-lg : 1280px;
+
+@mixin at-least($device-width) {
+	@media screen and (min-width : $device-width) {
+		@content
+	}
+}
+
+@mixin less-than($device-width) {
+	@media screen and (max-width : $device-width - 1) {
+		@content
+	}
+}

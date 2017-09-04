@@ -14,6 +14,13 @@ $providers : ("o", "ms", "moz", "webkit");
 	@include prefix($prop_list, $providers)
 }
 
+@mixin crossBrowser($property, $val...) {
+	#{$property}        : $val;
+	-ms-#{$property}    : $val;
+	-moz-#{$property}   : $val;
+	-webkit-#{$property}: $val;
+}
+
 @mixin filter($value) {
 	@include providers((filter : $value))
 }

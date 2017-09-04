@@ -10,8 +10,27 @@
 html {
 	font-family : 'Roboto', sans-serif;
 	min-height  : 100vh;
-
 	body {
+		.padding-sm {
+			padding : 10px;
+		}
+		.padding-md {
+			padding : 30px;
+		}
+		.padding-lg {
+			padding : 50px;
+		}
+		a {
+			color           : #413FAC;
+			font-weight     : 700;
+			text-decoration : none;
+			@include crossBrowser(transition, color 0.5s ease)
+		}
+		a:hover {
+			color           : #08AC8B;
+			font-weight     : 700;
+			text-decoration : underline;
+		}
 		.page-header {
 			background-color : #90A4AE;
 			@include center;

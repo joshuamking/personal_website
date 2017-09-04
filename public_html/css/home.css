@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i,900");
-
 @keyframes slideUp-after {
 	0% {
 		margin-bottom : 100px;
@@ -10,42 +9,37 @@
 		margin-top    : 0;
 	}
 }
-
 @keyframes fadeIn-el {
 	100% {
 		opacity : 1;
 	}
 }
-
 html body .anim-delay-sm {
 	animation-delay         : 1s;
-	-moz-animation-delay    : 1s;
-	-ms-animation-delay     : 1s;
 	-o-animation-delay      : 1s;
+	-ms-animation-delay     : 1s;
+	-moz-animation-delay    : 1s;
 	-webkit-animation-delay : 1s;
 }
-
 html body .anim-delay-md {
 	animation-delay         : 2s;
-	-moz-animation-delay    : 2s;
-	-ms-animation-delay     : 2s;
 	-o-animation-delay      : 2s;
+	-ms-animation-delay     : 2s;
+	-moz-animation-delay    : 2s;
 	-webkit-animation-delay : 2s;
 }
-
 html body .anim-delay-lg {
 	animation-delay         : 3s;
-	-moz-animation-delay    : 3s;
-	-ms-animation-delay     : 3s;
 	-o-animation-delay      : 3s;
+	-ms-animation-delay     : 3s;
+	-moz-animation-delay    : 3s;
 	-webkit-animation-delay : 3s;
 }
-
 html body .anim, html body .fade-in, html body .slide-up, html body .slide-up:before {
 	animation-duration          : 1s;
-	-moz-animation-duration     : 1s;
-	-ms-animation-duration      : 1s;
 	-o-animation-duration       : 1s;
+	-ms-animation-duration      : 1s;
+	-moz-animation-duration     : 1s;
 	-webkit-animation-duration  : 1s;
 	animation-fill-mode         : forwards;
 	-o-animation-fill-mode      : forwards;
@@ -53,24 +47,22 @@ html body .anim, html body .fade-in, html body .slide-up, html body .slide-up:be
 	-moz-animation-fill-mode    : forwards;
 	-webkit-animation-fill-mode : forwards;
 }
-
 html body .fade-in {
-	animation-name         : fadeIn-el;
-	-moz-animation-name    : fadeIn-el;
-	-ms-animation-name     : fadeIn-el;
-	-o-animation-name      : fadeIn-el;
-	-webkit-animation-name : fadeIn-el;
 	opacity                : 0;
+	animation-name         : fadeIn-el;
+	-o-animation-name      : fadeIn-el;
+	-ms-animation-name     : fadeIn-el;
+	-moz-animation-name    : fadeIn-el;
+	-webkit-animation-name : fadeIn-el;
 }
-
 html body .slide-up:before {
 	animation-delay        : inherit;
-	animation-name         : slideUp-after;
-	-moz-animation-name    : slideUp-after;
-	-ms-animation-name     : slideUp-after;
-	-o-animation-name      : slideUp-after;
-	-webkit-animation-name : slideUp-after;
 	content                : '';
+	animation-name         : slideUp-after;
+	-o-animation-name      : slideUp-after;
+	-ms-animation-name     : slideUp-after;
+	-moz-animation-name    : slideUp-after;
+	-webkit-animation-name : slideUp-after;
 	display                : block;
 	margin-bottom          : 0;
 	margin-top             : 100px;
@@ -87,35 +79,63 @@ html {
 	min-height  : 100vh;
 }
 
+html body .padding-sm {
+	padding : 10px;
+}
+
+html body .padding-md {
+	padding : 30px;
+}
+
+html body .padding-lg {
+	padding : 50px;
+}
+
+html body a {
+	color              : #413FAC;
+	font-weight        : 700;
+	text-decoration    : none;
+	transition         : color 0.5s ease;
+	-ms-transition     : color 0.5s ease;
+	-moz-transition    : color 0.5s ease;
+	-webkit-transition : color 0.5s ease;
+}
+
+html body a:hover {
+	color           : #08AC8B;
+	font-weight     : 700;
+	text-decoration : underline;
+}
+
 html body .page-header {
 	background-color   : #90A4AE;
-	border-bottom      : blue 2px dashed;
-	box-shadow         : 0px 0px 5px 0 rgba(0, 0, 0, 0.5);
-	-moz-box-shadow    : 0px 0px 5px 0 rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow : 0px 0px 5px 0 rgba(0, 0, 0, 0.5);
-	color              : white;
-	margin             : auto;
-	padding            : 40px;
-	position           : relative;
 	text-align         : center;
-	-o-box-shadow      : 0px 0px 5px 0 rgba(0, 0, 0, 0.5);
-	-ms-box-shadow     : 0px 0px 5px 0 rgba(0, 0, 0, 0.5);
+	margin             : auto;
+	position           : relative;
+	box-shadow         : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+	-o-box-shadow      : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+	-ms-box-shadow     : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+	-moz-box-shadow    : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+	border-bottom      : blue 2px dashed;
+	color              : white;
+	padding            : 40px;
 }
 
 html body .page-title {
+	text-align : center;
 	margin     : auto;
 	position   : relative;
-	text-align : center;
 }
 
 html body .page-tagline {
 	font-size   : 14pt;
+	text-align  : center;
+	margin      : auto;
+	position    : relative;
 	font-style  : italic;
 	font-weight : normal;
-	margin      : auto;
 	opacity     : 0.5;
-	position    : relative;
-	text-align  : center;
 }
 
 html {
@@ -124,13 +144,35 @@ html {
 	min-width   : 520px;
 }
 
+html .key-word {
+	color       : #AA464C;
+	font-weight : 700;
+}
+
 html body#home-page {
-	background-color         : #000000;
+	background               : #000000;
 	min-height               : 150vh;
+	background-color         : #000000;
 	-o-background-color      : #000000;
 	-ms-background-color     : #000000;
 	-moz-background-color    : #000000;
 	-webkit-background-color : #000000;
+}
+
+html body#home-page #scroll-down-for-more {
+	background-image            : url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+	background-size             : cover;
+	bottom                      : 5vh;
+	opacity                     : 0;
+	position                    : absolute;
+	animation-fill-mode         : forwards;
+	-ms-animation-fill-mode     : forwards;
+	-moz-animation-fill-mode    : forwards;
+	-webkit-animation-fill-mode : forwards;
+	animation                   : bounce 8s;
+	-ms-animation               : bounce 8s;
+	-moz-animation              : bounce 8s;
+	-webkit-animation           : bounce 8s;
 }
 
 html body#home-page #home-landing-view {
@@ -142,44 +184,41 @@ html body#home-page #home-landing-view {
 }
 
 html body#home-page #home-landing-view .page-title #profile-photo {
-	animation-name         : profile-photo-fadeIn, fadeIn-el;
-	-moz-animation-name    : profile-photo-fadeIn, fadeIn-el;
-	-o-animation-name      : profile-photo-fadeIn, fadeIn-el;
-	-webkit-animation-name : profile-photo-fadeIn, fadeIn-el;
-	border-radius          : 100%;
-	-moz-border-radius     : 100%;
-	-webkit-border-radius  : 100%;
-	height                 : 15vw;
-	min-height             : 100px;
-	min-width              : 100px;
-	opacity                : 0;
-	width                  : 15vw;
-	-o-border-radius       : 100%;
-	-ms-border-radius      : 100%;
+	height                : 15vw;
+	margin                : 15% 0;
+	min-height            : 100px;
+	min-width             : 100px;
+	opacity               : 0;
+	width                 : 15vw;
+	border-radius         : 100%;
+	-o-border-radius      : 100%;
+	-ms-border-radius     : 100%;
+	-moz-border-radius    : 100%;
+	-webkit-border-radius : 100%;
 }
 
 html body#home-page #home-landing-view #home-landing-view-bkg {
-	animation-duration         : 2s;
-	-moz-animation-duration    : 2s;
-	-ms-animation-duration     : 2s;
-	-o-animation-duration      : 2s;
-	-webkit-animation-duration : 2s;
 	animation-name             : bkg-photo-blur, fadeIn-el;
 	-moz-animation-name        : bkg-photo-blur, fadeIn-el;
 	-o-animation-name          : bkg-photo-blur, fadeIn-el;
 	-webkit-animation-name     : bkg-photo-blur, fadeIn-el;
-	background                 : url("../img/bkg1.jpg");
-	background-size            : cover;
 	display                    : block;
 	height                     : 100vh;
+	animation-duration         : 2s;
+	-o-animation-duration      : 2s;
+	-ms-animation-duration     : 2s;
+	-moz-animation-duration    : 2s;
+	-webkit-animation-duration : 2s;
 	position                   : fixed;
 	top                        : 0;
 	width                      : 100vw;
 	z-index                    : -1;
+	background                 : url("../img/bkg1.jpg");
 	-o-background              : url("../img/bkg1.jpg");
 	-ms-background             : url("../img/bkg1.jpg");
 	-moz-background            : url("../img/bkg1.jpg");
 	-webkit-background         : url("../img/bkg1.jpg");
+	background-size            : cover;
 	-o-background-size         : cover;
 	-ms-background-size        : cover;
 	-moz-background-size       : cover;
@@ -192,13 +231,187 @@ html body#home-page .section {
 }
 
 html body#home-page .section#section-1 {
-	background         : #FFFFFF;
-	box-shadow         : 0px 0px 4000px 150px #FFFFFF;
-	-moz-box-shadow    : 0px 0px 4000px 150px #FFFFFF;
-	-webkit-box-shadow : 0px 0px 4000px 150px #FFFFFF;
-	margin-top         : 300px;
-	-o-box-shadow      : 0px 0px 4000px 150px #FFFFFF;
-	-ms-box-shadow     : 0px 0px 4000px 150px #FFFFFF;
+	background         : rgba(255, 187, 211, 0.1);
+	margin-top         : 45vh;
+	box-shadow         : 0px 0px 100vh 30vh rgba(255, 187, 211, 0.1);
+	-o-box-shadow      : 0px 0px 100vh 30vh rgba(255, 187, 211, 0.1);
+	-ms-box-shadow     : 0px 0px 100vh 30vh rgba(255, 187, 211, 0.1);
+	-moz-box-shadow    : 0px 0px 100vh 30vh rgba(255, 187, 211, 0.1);
+	-webkit-box-shadow : 0px 0px 100vh 30vh rgba(255, 187, 211, 0.1);
+}
+
+html body#home-page .section#section-1 #course-links {
+	align-items     : center;
+	display         : flex;
+	height          : 100%;
+	justify-content : space-evenly;
+}
+
+html body#home-page .section#section-1 #course-links > div {
+	align-items     : center;
+	display         : flex;
+	justify-content : space-evenly;
+	padding         : 0;
+	width           : 100%;
+}
+
+@media screen and (max-width : 1023px) {
+	html body#home-page .section#section-1 #course-links > div {
+		flex-direction : column;
+	}
+}
+
+@media screen and (min-width : 1024px) {
+	html body#home-page .section#section-1 #course-links > div:hover .category {
+		opacity : 0;
+		width   : 0;
+	}
+}
+
+html body#home-page .section#section-1 #course-links > div:hover :not(:hover) {
+	transition         : border-radius 0.5s ease 0.1s, margin 0.5s ease 0.1s, opacity 0.5s ease 0s, width 0.5s ease 0.3s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+	-ms-transition     : border-radius 0.5s ease 0.1s, margin 0.5s ease 0.1s, opacity 0.5s ease 0s, width 0.5s ease 0.3s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+	-moz-transition    : border-radius 0.5s ease 0.1s, margin 0.5s ease 0.1s, opacity 0.5s ease 0s, width 0.5s ease 0.3s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+	-webkit-transition : border-radius 0.5s ease 0.1s, margin 0.5s ease 0.1s, opacity 0.5s ease 0s, width 0.5s ease 0.3s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+}
+
+html body#home-page .section#section-1 #course-links > div .category {
+	background            : #B9B694;
+	height                : 300px;
+	margin                : 0;
+	min-height            : 300px;
+	overflow              : hidden;
+	width                 : 300px;
+	border-radius         : 100%;
+	-o-border-radius      : 100%;
+	-ms-border-radius     : 100%;
+	-moz-border-radius    : 100%;
+	-webkit-border-radius : 100%;
+	box-shadow            : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+	-o-box-shadow         : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+	-ms-box-shadow        : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+	-moz-box-shadow       : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow    : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+	transition            : border-radius 0.5s ease 0.1s, margin 0.5s ease 0.1s, opacity 0.5s ease 0.1s, width 0.5s ease 0.1s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+	-ms-transition        : border-radius 0.5s ease 0.1s, margin 0.5s ease 0.1s, opacity 0.5s ease 0.1s, width 0.5s ease 0.1s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+	-moz-transition       : border-radius 0.5s ease 0.1s, margin 0.5s ease 0.1s, opacity 0.5s ease 0.1s, width 0.5s ease 0.1s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+	-webkit-transition    : border-radius 0.5s ease 0.1s, margin 0.5s ease 0.1s, opacity 0.5s ease 0.1s, width 0.5s ease 0.1s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+}
+
+@media screen and (max-width : 1023px) {
+	html body#home-page .section#section-1 #course-links > div .category {
+		margin : 5vh 0;
+	}
+}
+
+html body#home-page .section#section-1 #course-links > div .category:nth-of-type(1) {
+	background : #B9B694;
+}
+
+html body#home-page .section#section-1 #course-links > div .category:nth-of-type(2) {
+	background : #A5ACBF;
+}
+
+html body#home-page .section#section-1 #course-links > div .category:nth-of-type(3) {
+	background : #BFB1B8;
+}
+
+html body#home-page .section#section-1 #course-links > div .category > .category-title {
+	transition         : margin 0.5s ease 0.1s, height 0.5s ease 0.1s;
+	-ms-transition     : margin 0.5s ease 0.1s, height 0.5s ease 0.1s;
+	-moz-transition    : margin 0.5s ease 0.1s, height 0.5s ease 0.1s;
+	-webkit-transition : margin 0.5s ease 0.1s, height 0.5s ease 0.1s;
+	align-items        : center;
+	color              : rgba(255, 255, 255, 0.75);
+	display            : flex;
+	height             : 300px;
+	justify-content    : space-evenly;
+	margin-top         : 0;
+	text-align         : center;
+	width              : 300px;
+}
+
+html body#home-page .section#section-1 #course-links > div .category:hover {
+	height                : 50vh;
+	min-height            : 500px;
+	opacity               : 1;
+	width                 : 100vw;
+	z-index               : 2;
+	border-radius         : 0;
+	-o-border-radius      : 0;
+	-ms-border-radius     : 0;
+	-moz-border-radius    : 0;
+	-webkit-border-radius : 0;
+	transition            : border-radius 0.5s ease 0.1s, margin 0.5s ease 0s, opacity 0.5s ease 0s, width 0.5s ease 0.1s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+	-ms-transition        : border-radius 0.5s ease 0.1s, margin 0.5s ease 0s, opacity 0.5s ease 0s, width 0.5s ease 0.1s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+	-moz-transition       : border-radius 0.5s ease 0.1s, margin 0.5s ease 0s, opacity 0.5s ease 0s, width 0.5s ease 0.1s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+	-webkit-transition    : border-radius 0.5s ease 0.1s, margin 0.5s ease 0s, opacity 0.5s ease 0s, width 0.5s ease 0.1s, height 0.5s ease 0.1s, min-height 0.5s ease 0.1s;
+}
+
+@media screen and (max-width : 1023px) {
+	html body#home-page .section#section-1 #course-links > div .category:hover {
+		border-radius         : 50px;
+		-o-border-radius      : 50px;
+		-ms-border-radius     : 50px;
+		-moz-border-radius    : 50px;
+		-webkit-border-radius : 50px;
+		width                 : 90vw;
+	}
+}
+
+html body#home-page .section#section-1 #course-links > div .category:hover > .category-title {
+	transition         : margin 0.5s ease 0.1s, height 1s ease 0.15s;
+	-ms-transition     : margin 0.5s ease 0.1s, height 1s ease 0.15s;
+	-moz-transition    : margin 0.5s ease 0.1s, height 1s ease 0.15s;
+	-webkit-transition : margin 0.5s ease 0.1s, height 1s ease 0.15s;
+	height             : 20%;
+}
+
+html body#home-page .section#section-1 #course-links > div .category:hover .category-content {
+	transition         : opacity 0.5s ease 0.3s, width 0s ease 0s, height 0s ease 0s;
+	-ms-transition     : opacity 0.5s ease 0.3s, width 0s ease 0s, height 0s ease 0s;
+	-moz-transition    : opacity 0.5s ease 0.3s, width 0s ease 0s, height 0s ease 0s;
+	-webkit-transition : opacity 0.5s ease 0.3s, width 0s ease 0s, height 0s ease 0s;
+	height             : 70%;
+	opacity            : 1;
+	width              : 100%;
+}
+
+html body#home-page .section#section-1 #course-links > div .category .category-content {
+	align-items        : center;
+	color              : rgba(255, 255, 255, 0.75);
+	display            : flex;
+	flex-direction     : row-reverse;
+	height             : 0;
+	justify-content    : space-evenly;
+	opacity            : 0;
+	width              : 0;
+	transition         : opacity 0.5s ease 0s, width 0s ease 0.3s, height 0s ease 0.3s;
+	-ms-transition     : opacity 0.5s ease 0s, width 0s ease 0.3s, height 0s ease 0.3s;
+	-moz-transition    : opacity 0.5s ease 0s, width 0s ease 0.3s, height 0s ease 0.3s;
+	-webkit-transition : opacity 0.5s ease 0s, width 0s ease 0.3s, height 0s ease 0.3s;
+}
+
+html body#home-page .section#section-1 #course-links > div .category .category-content > table {
+	border     : 0;
+	color      : initial;
+	min-height : 300px;
+	min-width  : 6vw;
+	width      : 85%;
+	align      : center;
+}
+
+html body#home-page .section#section-1 #course-links > div .category .category-content > table tr:nth-of-type(2n) {
+	background-color : #F0F8FF;
+}
+
+html body#home-page .section#section-1 #course-links > div .category .category-content > table tr:nth-of-type(2n+1) {
+	background-color : #D8FFDE;
+}
+
+html body#home-page .section#section-1 #course-links > div .category .category-content > table tr td {
+	padding    : 0 50px;
+	text-align : center;
 }
 
 @keyframes bkg-photo-blur {
@@ -225,6 +438,33 @@ html body#home-page .section#section-1 {
 	}
 }
 
+@keyframes bounce {
+	0%, 15% {
+		opacity : 0;
+	}
+	20%, 22%, 25%, 27%, 30%, 32%, 35%, 37%, 40%, 42%, 45%, 47%, 50% {
+		transform         : translateY(0);
+		-ms-transform     : translateY(0);
+		-moz-transform    : translateY(0);
+		-webkit-transform : translateY(0);
+		opacity           : 1;
+	}
+	24%, 34%, 44% {
+		transform         : translateY(-30px);
+		-ms-transform     : translateY(-30px);
+		-moz-transform    : translateY(-30px);
+		-webkit-transform : translateY(-30px);
+	}
+	26%, 36%, 46% {
+		transform         : translateY(-10px);
+		-ms-transform     : translateY(-10px);
+		-moz-transform    : translateY(-10px);
+		-webkit-transform : translateY(-10px);
+	}
+	55%, 100% {
+		opacity : 0;
+	}
+}
 @keyframes profile-photo-fadeIn {
 	0% {
 		box-shadow         : none;
