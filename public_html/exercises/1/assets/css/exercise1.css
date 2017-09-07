@@ -10,53 +10,53 @@
   100% {
     opacity: 1; } }
 html body .anim-delay-sm {
-  animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -ms-animation-delay: 1s;
-  -o-animation-delay: 1s;
-  -webkit-animation-delay: 1s; }
+  animation-delay         : 1s;
+  -o-animation-delay      : 1s;
+  -ms-animation-delay     : 1s;
+  -moz-animation-delay    : 1s;
+  -webkit-animation-delay : 1s; }
 html body .anim-delay-md {
-  animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  -ms-animation-delay: 2s;
-  -o-animation-delay: 2s;
-  -webkit-animation-delay: 2s; }
+  animation-delay         : 2s;
+  -o-animation-delay      : 2s;
+  -ms-animation-delay     : 2s;
+  -moz-animation-delay    : 2s;
+  -webkit-animation-delay : 2s; }
 html body .anim-delay-lg {
-  animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -ms-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  -webkit-animation-delay: 3s; }
+  animation-delay         : 3s;
+  -o-animation-delay      : 3s;
+  -ms-animation-delay     : 3s;
+  -moz-animation-delay    : 3s;
+  -webkit-animation-delay : 3s; }
 html body .anim, html body .fade-in, html body .slide-up, html body .slide-up:before {
-  animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -ms-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  -webkit-animation-duration: 1s;
-  animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -webkit-animation-fill-mode: forwards; }
+  animation-duration          : 1s;
+  -o-animation-duration       : 1s;
+  -ms-animation-duration      : 1s;
+  -moz-animation-duration     : 1s;
+  -webkit-animation-duration  : 1s;
+  animation-fill-mode         : forwards;
+  -o-animation-fill-mode      : forwards;
+  -ms-animation-fill-mode     : forwards;
+  -moz-animation-fill-mode    : forwards;
+  -webkit-animation-fill-mode : forwards; }
 html body .fade-in {
-  animation-name: fadeIn-el;
-  -moz-animation-name: fadeIn-el;
-  -ms-animation-name: fadeIn-el;
-  -o-animation-name: fadeIn-el;
-  -webkit-animation-name: fadeIn-el; }
-  opacity: 0;
+  opacity                : 0;
+  animation-name         : fadeIn-el;
+  -o-animation-name      : fadeIn-el;
+  -ms-animation-name     : fadeIn-el;
+  -moz-animation-name    : fadeIn-el;
+  -webkit-animation-name : fadeIn-el; }
 html body .slide-up:before {
-  animation-delay: inherit;
-  animation-name: slideUp-after;
-  -moz-animation-name: slideUp-after;
-  -ms-animation-name: slideUp-after;
-  -o-animation-name: slideUp-after;
-  -webkit-animation-name: slideUp-after;
-  content: '';
-  display: block;
-  margin-bottom: 0;
-  margin-top: 100px;
-  opacity: 0; }
+  animation-delay        : inherit;
+  content                : '';
+  animation-name         : slideUp-after;
+  -o-animation-name      : slideUp-after;
+  -ms-animation-name     : slideUp-after;
+  -moz-animation-name    : slideUp-after;
+  -webkit-animation-name : slideUp-after;
+  display                : block;
+  margin-bottom          : 0;
+  margin-top             : 100px;
+  opacity                : 0; }
 
 * {
   margin: 0;
@@ -72,42 +72,42 @@ html {
   html body .padding-lg {
     padding: 50px; }
   html body a {
-    color: #413FAC;
-    font-weight: 700;
-    text-decoration: none;
-    transition: color 0.5s ease;
-    -moz-transition: color 0.5s ease;
-    -ms-transition: color 0.5s ease;
-    -webkit-transition: color 0.5s ease; }
+    color              : #413FAC;
+    font-weight        : 700;
+    text-decoration    : none;
+    transition         : color 0.5s ease;
+    -ms-transition     : color 0.5s ease;
+    -moz-transition    : color 0.5s ease;
+    -webkit-transition : color 0.5s ease; }
   html body a:hover {
     color: #08AC8B;
     font-weight: 700;
     text-decoration: underline; }
   html body .page-header {
-    background-color: #90A4AE;
-    border-bottom: blue 2px dashed;
-    box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
-    color: white;
-    margin: auto;
-    padding: 40px; }
-    position: relative;
-    text-align: center;
-    -o-box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
-    -ms-box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+    background-color   : #90A4AE;
+    text-align         : center;
+    margin             : auto;
+    position           : relative;
+    box-shadow         : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+    -o-box-shadow      : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+    -ms-box-shadow     : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow    : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow : 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
+    border-bottom      : blue 2px dashed;
+    color              : white;
+    padding            : 40px; }
   html body .page-title {
-    margin: auto;
-    position: relative; }
-    text-align: center;
+    text-align : center;
+    margin     : auto;
+    position   : relative; }
   html body .page-tagline {
-    font-size: 14pt;
-    font-style: italic;
-    font-weight: normal;
-    margin: auto;
-    opacity: 0.5; }
-    position: relative;
-    text-align: center;
+    font-size   : 14pt;
+    text-align  : center;
+    margin      : auto;
+    position    : relative;
+    font-style  : italic;
+    font-weight : normal;
+    opacity     : 0.5; }
 
 html body {
   background: url("../img/galaxy.jpg") no-repeat;
@@ -137,18 +137,18 @@ html body {
       html body .content .footer .right {
         float: right; }
     html body .content .card {
-      background-color: #ECEFF1;
-      box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      margin: 50px;
-      padding: 5%;
-      -o-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      -ms-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      -o-background-color: #ECEFF1;
-      -ms-background-color: #ECEFF1;
-      -moz-background-color: #ECEFF1;
-      -webkit-background-color: #ECEFF1; }
+      margin                   : 50px;
+      padding                  : 5%;
+      box-shadow               : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+      -o-box-shadow            : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+      -ms-box-shadow           : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+      -moz-box-shadow          : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow       : 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+      background-color         : #ECEFF1;
+      -o-background-color      : #ECEFF1;
+      -ms-background-color     : #ECEFF1;
+      -moz-background-color    : #ECEFF1;
+      -webkit-background-color : #ECEFF1; }
       html body .content .card[card-bkg] {
         background-image: attr(card-bkg url);
         -o-background-image: attr(card-bkg url);
