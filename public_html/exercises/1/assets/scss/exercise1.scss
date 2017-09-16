@@ -6,8 +6,12 @@ html {
 		background-size : cover;
 
 		.content {
-			padding : 10%;
+			padding : 5%;
 			.page-header {
+				text-align       : center;
+				background-color : #90A4AE;
+				border-bottom    : blue 2px dashed;
+
 				.page-title {
 					opacity : 0.75;
 				}
@@ -23,6 +27,8 @@ html {
 
 			.section {
 				padding : 2%;
+				height  : auto;
+				width   : auto;
 
 				h2 {
 					text-align : right;

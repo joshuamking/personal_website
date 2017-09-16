@@ -2,7 +2,9 @@
 @import "mixins";
 @import "anims";
 
-* {
+$color-link : #413FAC;
+$color-link-hover : #08AC8B;
+*:not(ul):not(ol) {
 	margin  : 0;
 	padding : 0;
 }
@@ -10,7 +12,52 @@
 html {
 	font-family : 'Roboto', sans-serif;
 	min-height  : 100vh;
+	min-width   : 520px;
+
 	body {
+		.center {
+			@include center();
+		}
+		.inline-list {
+			list-style : none;
+			> li {
+				display : inline-block;
+				padding : 10px;
+			}
+		}
+		%flex {
+			display : flex;
+		}
+		.flex-column {
+			@extend %flex;
+			&:not(.flex-reverse) {
+				flex-direction : column;
+			}
+			&.flex-reverse {
+				flex-direction : column-reverse;
+			}
+		}
+		.flex-row {
+			@extend %flex;
+			&:not(.flex-reverse) {
+				flex-direction : row;
+			}
+			&.flex-reverse {
+				flex-direction : row-reverse;
+			}
+		}
+		.flex-center {
+			@extend %flex;
+			align-items : center;
+		}
+		.flex-between {
+			@extend %flex;
+			justify-content : space-between;
+		}
+		.flex-around {
+			@extend %flex;
+			justify-content : space-around;
+		}
 		.padding-sm {
 			padding : 10px;
 		}
@@ -20,34 +67,155 @@ html {
 		.padding-lg {
 			padding : 50px;
 		}
+
+		$ghostlyTextConfig : h1 7vw, h2 3em, h3 2em, h4 1.5em, h5 1.2em, h6 1em, p 1em;
+
+		@each $tuple in $ghostlyTextConfig {
+			#{nth($tuple, 1)}.ghostly-text {
+				@include drop-shadow(1px, 1px, 1px, rgba(255, 255, 255, 0.5));
+				font-weight : 900;
+				color       : #FFFFFF;
+				opacity     : 0.75;
+				font-size   : nth($tuple, 2);
+			}
+		}
+		.bold {
+			font-weight : 900;
+		}
 		a {
-			color           : #413FAC;
+			color           : $color-link;
 			font-weight     : 700;
 			text-decoration : none;
 			@include crossBrowser(transition, color 0.5s ease)
 		}
 		a:hover {
-			color           : #08AC8B;
+			color           : $color-link-hover;
 			font-weight     : 700;
 			text-decoration : underline;
 		}
+
+		> .wrapper {
+			$wrapper-width : 1280px !default;
+			width     : 100vw;
+			max-width : $wrapper-width;
+			margin    : auto;
+			position  : relative;
+		}
+
+		.section {
+			height : 100vh;
+			width  : 100vw;
+		}
+
+		$color-page-header : #004975 !default;
 		.page-header {
-			background-color : #90A4AE;
-			@include center;
+			text-align : left;
+			color      : white;
+			padding    : 40px;
+			background : $color-page-header;
+			z-index    : 1000;
+			position   : relative;
 			@include box-shadow(0px, 0px, 5px);
-			border-bottom    : blue 2px dashed;
-			color            : white;
-			padding          : 40px;
 		}
-		.page-title {
-			@include center;
+		.page-menu {
+			z-index    : 1000;
+			$howLightTheBkgIs : lightness($color-page-header);
+			$linkColor : $color-link;
+			$linkColorHover : $color-link;
+			@if ($howLightTheBkgIs > 50) {
+				$linkColor : darken($color-page-header, 15);
+				$linkColorHover : darken($color-page-header, 25);
+			} @else {
+				$linkColor : lighten($color-page-header, 15);
+				$linkColorHover : lighten($color-page-header, 25);
+			}
+			*:hover {
+				text-decoration : none;
+			}
+
+			//margin-top    : 30px;
+			//margin-bottom : -30px;
+			margin     : 0;
+			position   : -webkit-sticky;
+			position   : sticky;
+			top        : 0;
+			padding    : 20px 40px;
+			@include box-shadow(0px, 5px, 5px);
+			background : $color-page-header;
+
+			> li { // Level 0 menu item
+				display        : inline-block;
+				@extend .padding-sm;
+				margin         : 0 20px;
+				text-transform : uppercase;
+				opacity        : 0.75;
+				cursor         : default;
+
+				> ul { // Level 1 menu list
+					text-transform : initial;
+					background     : #EEEEEE;
+					position       : absolute;
+					width          : 210px;
+					margin         : 10px 0 0;
+					padding        : 0;
+					opacity        : 0;
+					left           : -1000%;
+					@include round(3px);
+					@include crossBrowser(transition, opacity 500ms);
+
+					> li { // Level 1 menu item
+						> a {
+							display     : inline-block;
+							//margin  : 20px;
+							padding     : 10px;
+							width       : 100%;
+							color       : $linkColor;
+							font-weight : 500;
+						}
+
+						> a:hover {
+							color       : $linkColorHover;
+							font-weight : 700;
+						}
+
+						&:not(:last-of-type) {
+							border-bottom : $color-link 1px solid;
+						}
+					}
+				}
+
+				&:hover {
+					//background : $linkColor;
+					//@include round(5px);
+					opacity : 1;
+
+					> ul {
+						opacity : 1;
+						left    : auto;
+						height  : auto;
+						* {
+							visibility : visible;
+						}
+					}
+				}
+			}
+
+			&, ul, li {
+				list-style : none;
+			}
+			a, p, span, > li {
+				color : #FFFFFF;
+			}
 		}
-		.page-tagline {
-			font-size   : 14pt;
-			@include center;
-			font-style  : italic;
-			font-weight : normal;
-			opacity     : 0.5;
-		}
+	}
+	.page-title {
+		@include center;
+	}
+	.page-tagline {
+		font-size   : 14pt;
+		@include center;
+		font-style  : italic;
+		font-weight : normal;
+		opacity     : 0.5;
 	}
 }

@@ -17,10 +17,12 @@ for DIR in `find ${PUBLIC_HTML} -type d`; do
 	DIR_NAME=$(basename `pwd`)
 
 	if [[ . -ef ${PUBLIC_HTML} ]]; then
-		cp -f index.html .index.bkp.html
-		IS_PUBLIC_HTML=1
+		#		cp -f index.html .index.bkp.html
+		IS_PUBLIC_HTML=sitemap.html
+		SITE_MAP_TITLE="<a href=\"/~jking82\">jking82</a>"
 	else
 		unset IS_PUBLIC_HTML;
+		unset SITE_MAP_TITLE;
 	fi
 
 	TITLE="REMOVE_LINE_IS_HERE"
@@ -28,31 +30,34 @@ for DIR in `find ${PUBLIC_HTML} -type d`; do
 	#	TITLE=${IS_PUBLIC_HTML:-$DIR_NAME}
 	tree -F -T "$TITLE" -I "*.map|index.html" -H "." | sed '/[0-9]* directories\, [0-9]* files/,//d' | tac | sed '/\<h1\>REMOVE_LINE_IS_HERE/,//d' | sed -n '/─/,$p' | tac | sed '1d' >.project-structure-gen.out
 
-	if [[ ${IS_PUBLIC_HTML} ]]; then
-		#		cat .project-structure-gen.out > .project-structure-gen.out
-		sed -n "$(echo "1,/.*id=\"file-tree\".*/p;/$END_OF_PROJECT_STRUCTURE_COMMENT/,\$p")" index.html |  \
- sed "$(echo "/$END_OF_PROJECT_STRUCTURE_COMMENT/d")" >.index.html.tmp
-		echo "$END_OF_PROJECT_STRUCTURE_COMMENT" | { read val;
-			echo ${val}; } >>.project-structure-gen.out
-
-		LINE_NUM_OF_START=$(egrep -n ".*id=\"file-tree\".*" .index.html.tmp | cut -f1 -d:)
-		sed "$LINE_NUM_OF_START r.project-structure-gen.out" .index.html.tmp >index.html
-	else
-		echo "$(echo "<!DOCTYPE html>
+	#	if [ false ]; then
+	#		sed -n "$(echo "1,/.*id=\"file-tree\".*/p;/$END_OF_PROJECT_STRUCTURE_COMMENT/,\$p")" sitemap.html | sed "$(echo "/$END_OF_PROJECT_STRUCTURE_COMMENT/d")" >.sitemap.html.tmp
+	#		echo "$END_OF_PROJECT_STRUCTURE_COMMENT" | {
+	#			read val;
+	#			echo ${val};
+	#		} >>.project-structure-gen.out
+	#
+	#		LINE_NUM_OF_START=$(egrep -n ".*id=\"file-tree\".*" .sitemap.html.tmp | cut -f1 -d:)
+	#		sed "$LINE_NUM_OF_START r.project-structure-gen.out" .sitemap.html.tmp >sitemap.html
+	#		rm -f .sitemap.html.tmp
+	#	else
+	echo "$(echo "<!DOCTYPE html>
 		<html>
 		<head>
 		</head>
 		<body>"
-			echo "<h1>$DIR_NAME</h1>"
+			echo "<h1>${SITE_MAP_TITLE:-$DIR_NAME}</h1>"
 			echo "$(cat .project-structure-gen.out)"
-			echo "<br><br>
-			<h4>
-			&Uparrow; &MediumSpace;&MediumSpace; <a href=\"../\">Go up one level</a>
-			<br>
-			🏠&MediumSpace;&MediumSpace;<a href=\"/~jking82\">jking82 - Home</a>
-			</h4>
-		</body>
-		</html>")" >index.html
-	fi
-	rm -f .index.html.tmp .project-structure-gen.out
+			if ! [[ ${IS_PUBLIC_HTML} ]]; then
+				echo "<br><br>
+					<h4>
+					&Uparrow; &MediumSpace;&MediumSpace; <a href=\"../\">Go up one level</a>
+					<br>
+					🏠&MediumSpace;&MediumSpace;<a href=\"/~jking82/sitemap.html\">jking82 - Home</a>
+					</h4>"
+			fi
+	echo "</body>
+		</html>")" >${IS_PUBLIC_HTML:-index.html}
+	#	fi
+	rm -f .project-structure-gen.out
 done

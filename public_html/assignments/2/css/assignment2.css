@@ -183,7 +183,7 @@ html {
     text-decoration: underline; }
   html body > .wrapper {
     width: 100vw;
-    max-width: 1280px;
+    max-width: 1024px;
     margin: auto;
     position: relative; }
   html body .section {
@@ -193,7 +193,7 @@ html {
     text-align: left;
     color: white;
     padding: 40px;
-    background: #004975;
+    background: #6D69AC;
     z-index: 1000;
     position: relative;
     box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.75);
@@ -213,7 +213,7 @@ html {
     -ms-box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.75);
-    background: #004975; }
+    background: #6D69AC; }
     html body .page-menu *:hover {
       text-decoration: none; }
     html body .page-menu > li {
@@ -244,10 +244,10 @@ html {
           display: inline-block;
           padding: 10px;
           width: 100%;
-          color: #0079c2;
+          color: #4b4781;
           font-weight: 500; }
         html body .page-menu > li > ul > li > a:hover {
-          color: #0099f5;
+          color: #383560;
           font-weight: 700; }
         html body .page-menu > li > ul > li:not(:last-of-type) {
           border-bottom: #413FAC 1px solid; }
@@ -276,67 +276,101 @@ html {
     font-weight: normal;
     opacity: 0.5; }
 
-html body {
-  background: url("../img/galaxy.jpg") no-repeat;
-  background-size: cover; }
-  html body .content {
-    padding: 5%; }
-    html body .content .page-header {
-      text-align: center;
-      background-color: #90A4AE;
-      border-bottom: blue 2px dashed; }
-      html body .content .page-header .page-title {
-        opacity: 0.75; }
-    html body .content img.float-right {
-      float: right;
-      height: 100%;
-      vertical-align: middle; }
-    html body .content .section {
-      padding: 2%;
-      height: auto;
-      width: auto; }
-      html body .content .section h2 {
-        text-align: right; }
-      html body .content .section p {
-        padding-bottom: 10px;
-        padding-top: 10px; }
-    html body .content .footer {
-      background-color: #A8F0F0; }
-      html body .content .footer .left {
-        display: inline;
-        width: 10px; }
-        html body .content .footer .left p {
-          width: 10px; }
-      html body .content .footer .right {
-        float: right; }
-    html body .content .card {
-      margin: 50px;
-      padding: 5%;
-      box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      -o-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      -ms-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
-      background-color: #ECEFF1;
-      -o-background-color: #ECEFF1;
-      -ms-background-color: #ECEFF1;
-      -moz-background-color: #ECEFF1;
-      -webkit-background-color: #ECEFF1; }
-      html body .content .card[card-bkg] {
-        background-image: attr(card-bkg url);
-        -o-background-image: attr(card-bkg url);
-        -ms-background-image: attr(card-bkg url);
-        -moz-background-image: attr(card-bkg url);
-        -webkit-background-image: attr(card-bkg url); }
-      html body .content .card:not([card-bkg]) {
-        background-color: #ECEFF1;
-        -o-background-color: #ECEFF1;
-        -ms-background-color: #ECEFF1;
-        -moz-background-color: #ECEFF1;
-        -webkit-background-color: #ECEFF1; }
-    html body .content .card:nth-of-type(1) {
-      border: 10px solid white; }
-    html body .content .card:nth-of-type(2) {
-      border: 4px solid #C2E9E9; }
+html {
+  background: #FFFFFF; }
+  html body#assignment2, html body#recipe2 {
+    background-color: #9FA8DA; }
+    html body#assignment2 .page-header, html body#recipe2 .page-header {
+      padding: 20px; }
+  html body#recipe2 {
+    background-color: transparent; }
+    html body#recipe2 .section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 90vh;
+      height: auto; }
+      html body#recipe2 .section#enjoy {
+        height: 50vh;
+        width: 100%; }
+      html body#recipe2 .section .card {
+        margin: 25vh 10% 30vh;
+        padding: 40px;
+        width: 50vw;
+        max-width: 600px;
+        min-width: 400px;
+        align-self: center;
+        border-radius: 10px;
+        -o-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+        -o-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+        -ms-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 4px 4px 3px 0 rgba(0, 0, 0, 0.75);
+        background: #FFFFFF;
+        transition: all 250ms ease;
+        -ms-transition: all 250ms ease;
+        -moz-transition: all 250ms ease;
+        -webkit-transition: all 250ms ease;
+        position: sticky;
+        top: 30vh;
+        letter-spacing: 1.2px; }
+        html body#recipe2 .section .card ul {
+          list-style-type: square; }
+        html body#recipe2 .section .card > h3, html body#recipe2 .section .card h4, html body#recipe2 .section .card h5, html body#recipe2 .section .card h6 {
+          opacity: 0.5; }
+        html body#recipe2 .section .card:hover {
+          box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.5);
+          -o-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.5);
+          -ms-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.5);
+          -moz-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.5);
+          -webkit-box-shadow: 5px 5px 6px 2px rgba(0, 0, 0, 0.5); }
+    html body#recipe2 #recipe_bkg {
+      background-image: url("../img/pie_bkg.jpeg");
+      background-size: cover;
+      height: 100vh;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: -1;
+      filter: blur(10px);
+      -o-filter: blur(10px);
+      -ms-filter: blur(10px);
+      -moz-filter: blur(10px);
+      -webkit-filter: blur(10px); }
+  html body#recipe > .wrapper {
+    font-family: Georgia, Garamond, serif;
+    color: #000000;
+    background: #FFCC00;
+    padding: 10px; }
+    html body#recipe > .wrapper h1, html body#recipe > .wrapper h2, html body#recipe > .wrapper h3, html body#recipe > .wrapper h4, html body#recipe > .wrapper h5, html body#recipe > .wrapper h6 {
+      color: #A4A400;
+      background-color: #F0F0F0;
+      font-family: Century Gothic, Futura, Verdana, sans-serif; }
+    html body#recipe > .wrapper .text-larger {
+      font-size: 1.3em; }
+    html body#recipe > .wrapper .this-page-path > li {
+      background: #c8c800;
+      border-right: blue solid 10px;
+      padding: 5px 10px; }
+    html body#recipe > .wrapper table {
+      color: #FFFFFF;
+      background-color: #CC9933;
+      margin-top: 20px; }
+      html body#recipe > .wrapper table, html body#recipe > .wrapper table th, html body#recipe > .wrapper table td {
+        border-color: #FFFFFF; }
+      html body#recipe > .wrapper table caption {
+        background: #F0F0F0;
+        color: #A4A400; }
+      html body#recipe > .wrapper table th {
+        background-color: #003366; }
+      html body#recipe > .wrapper table td, html body#recipe > .wrapper table th {
+        padding: 5px;
+        border: 2px solid white; }
+      html body#recipe > .wrapper table td:first-of-type {
+        background-color: #003366; }
 
-/*# sourceMappingURL=exercise1.css.map */
+/*# sourceMappingURL=assignment2.css.map */

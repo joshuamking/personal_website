@@ -1,0 +1,116 @@
+$color-page-header : #6D69AC;
+$wrapper-width : 1024px;
+
+@import "../../../scss/includes/base";
+
+html {
+	background : #FFFFFF;
+
+	body#assignment2, body#recipe2 {
+		background-color : #9FA8DA;
+
+		.page-header {
+			padding : 20px;
+		}
+	}
+	body#recipe2 {
+		background-color : transparent;
+		.section {
+			display         : flex;
+			justify-content : space-around;
+			align-items     : center;
+			min-height      : 90vh;
+			height          : auto;
+
+			&#enjoy {
+				height : 50vh;
+				width  : 100%;
+			}
+
+			.card {
+				margin         : 25vh 10% 30vh;
+				padding        : 40px;
+				width          : 50vw;
+				max-width      : 600px;
+				min-width      : 400px;
+				align-self     : center;
+				@include round(10px);
+				@include box-shadow();
+				background     : #FFFFFF;
+				@include crossBrowser(transition, all 250ms ease);
+				position       : sticky;
+				top            : 30vh;
+				letter-spacing : 1.2px;
+
+				ul {
+					list-style-type : square;
+				}
+
+				> h3, h4, h5, h6 {
+					opacity : 0.5;
+				}
+				&:hover {
+					@include box-shadow(5px, 5px, 6px, rgba(0, 0, 0, 0.5), 2px);
+				}
+			}
+		}
+		#recipe_bkg {
+			background-image : url("../img/pie_bkg.jpeg");
+			background-size  : cover;
+			height           : 100vh;
+			position         : fixed;
+			width            : 100%;
+			top              : 0;
+			z-index          : -1;
+			@include blur();
+		}
+	}
+	body#recipe > .wrapper {
+		font-family : Georgia, Garamond, serif;
+		color       : #000000;
+		background  : #FFCC00;
+		padding     : 10px;
+
+		$green-color : #A4A400;
+		h1, h2, h3, h4, h5, h6 {
+			color            : $green-color;
+			background-color : #F0F0F0;
+			font-family      : Century Gothic, Futura, Verdana, sans-serif;
+		}
+		.text-larger {
+			font-size : 1.3em
+		}
+		.this-page-path {
+			> li {
+				background   : lighten($green-color, 7);
+				border-right : blue solid 10px;
+				padding      : 5px 10px;
+			}
+		}
+		table {
+			color            : #FFFFFF;
+			background-color : #CC9933;
+			margin-top       : 20px;
+
+			&, th, td {
+				border-color : #FFFFFF;
+			}
+
+			caption {
+				background : #F0F0F0;
+				color      : $green-color;
+			}
+
+			th {
+				background-color : #003366;
+			}
+			td, th {
+				padding : 5px;
+				border  : 2px solid white;
+			}
+			td:first-of-type {
+				background-color : #003366;
+			}
+		}
+	}
+}

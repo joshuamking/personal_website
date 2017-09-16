@@ -19,6 +19,6 @@
 	@include filter(drop-shadow($x $y $blur $color));
 }
 
-@mixin blur($radius: 0px) {
+@mixin blur($radius: 10px) {
 	@include filter(blur($radius));
 }
