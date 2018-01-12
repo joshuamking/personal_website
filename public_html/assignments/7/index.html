@@ -1,15 +1,94 @@
 <!DOCTYPE html>
-		<html>
-		<head>
-		</head>
-		<body>
-<h1>7</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joshua King - Assignment 6a</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <style type="text/css">
+        .removable li {
+            width      : 100px;
+            height     : 100px;
+            background : #CCCCCC;
+            display    : inline-block;
+            z-index    : 100;
+        }
 
-<br><br>
-					<h4>
-					&Uparrow; &MediumSpace;&MediumSpace; <a href="../">Go up one level</a>
-					<br>
-					🏠&MediumSpace;&MediumSpace;<a href="/~jking82/sitemap.html">jking82 - Home</a>
-					</h4>
+        img {
+            z-index : -1;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <p>Payment: </p>
+        <label>
+            Credit Card
+            <input name="payment" value="credit_card" type="radio">
+        </label>
+        <label>
+            Wire Transfer
+            <input name="payment" value="wire_transfer" type="radio">
+        </label>
+        <div id="on_credit_show">
+            <label>Card number:</label>
+            <input pattern="\d*" type="text">
+            <label>Expiration:</label>
+            <input pattern="\d\d" style="width: 20px" type="text"> / <input
+                pattern="\d\d"
+                style="width: 20px"
+                type="text">
+            <label>3-digit security number:</label>
+            <input pattern="\d\d\d" type="text">
+        </div>
+        <div id="on_transfer_show">
+            <p>Transfer the amount to: reg. $957.00, to account 0009286322 (in English)</p>
+        </div>
+        <input type="submit" value="Buy!">
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <img
+            width="100px"
+            height="100px"
+            class="trash"
+            src="https://d30y9cdsu7xlg0.cloudfront.net/png/3058-200.png"
+            alt="trash can">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ul class="removable">
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+        <li>
+        </li>
+    </ul>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ul id="ajax_example">
+    </ul>
+
 </body>
-		</html>
+</html>

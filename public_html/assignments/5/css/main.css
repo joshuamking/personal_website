@@ -1,0 +1,16 @@
+* {
+	margin  : 0;
+	padding : 0;
+}
+
+body {
+	padding : 20px;
+}
+
+body .error {
+	color   : rgba(255, 59, 53, 0.5);
+	display : none;
+}
+
+/*# sourceMappingURL=main.css.map */
+ 

@@ -1,0 +1,29 @@
+{
+  "name": "gsucodd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuamking/personal_website.git"
+  },
+  "author": "Joshua King",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshuamking/personal_website/issues"
+  },
+  "homepage": "https://github.com/joshuamking/personal_website#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.2.15",
+    "ts-loader": "^3.0.3",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "tsify": "^3.0.3",
+    "typescript": "^2.5.3"
+  }
+}

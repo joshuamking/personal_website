@@ -1,0 +1,163 @@
+html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif; }
+
+.content {
+  max-width: 1080px;
+  height: 100vh; }
+
+.layout .mdl-layout__header {
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease; }
+  .layout .mdl-layout__header:not(.is-casting-shadow) {
+    background-color: #F5F5F5 !important;
+    color: #757575 !important; }
+    .layout .mdl-layout__header:not(.is-casting-shadow) .mdl-layout__drawer-button {
+      color: #757575 !important; }
+.layout .mdl-menu .mdl-menu__item {
+  display: flex;
+  align-items: center; }
+.layout .drawer {
+  border: none; }
+  .layout .drawer .mdl-menu__container {
+    z-index: -1; }
+  .layout .drawer .drawer-header {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    height: 151px; }
+    .layout .drawer .drawer-header .avatar-dropdown {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+      width: 100%; }
+  .layout .drawer .navigation {
+    z-index: -2;
+    flex-grow: 1; }
+    .layout .drawer .navigation .mdl-navigation__link {
+      display: flex !important;
+      flex-direction: row;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.56);
+      font-weight: 500;
+      background-color: transparent;
+      transition: all 250ms ease;
+      cursor: pointer; }
+      .layout .drawer .navigation .mdl-navigation__link:hover {
+        background-color: #663FB4; }
+      .layout .drawer .navigation .mdl-navigation__link .material-icons {
+        font-size: 24px;
+        color: rgba(255, 255, 255, 0.56);
+        margin-right: 32px; }
+
+.cards {
+  align-items: flex-start;
+  align-content: flex-start; }
+
+.cards .separator {
+  height: 32px; }
+
+.cards .mdl-card__title.mdl-card__title {
+  color: white;
+  font-size: 24px;
+  font-weight: 400; }
+
+.cards ul {
+  padding: 0; }
+
+.cards h3 {
+  font-size: 1em; }
+
+.updates .mdl-card__title {
+  min-height: 200px;
+  background-position: 90% 100%;
+  background-repeat: no-repeat; }
+
+.cards .mdl-card__actions a {
+  color: #00BCD4;
+  text-decoration: none; }
+
+.options h3 {
+  margin: 0; }
+
+.options .mdl-checkbox__box-outline {
+  border-color: rgba(255, 255, 255, 0.89); }
+
+.options ul {
+  margin: 0;
+  list-style-type: none; }
+
+.options li {
+  margin: 4px 0; }
+
+.options .material-icons {
+  color: rgba(255, 255, 255, 0.89); }
+
+.options .mdl-card__actions {
+  height: 64px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center; }
+
+#album_artist_name_selector {
+  text-transform: initial;
+  font-weight: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+  #album_artist_name_selector ~ .mdl-menu__container {
+    width: 100% !important; }
+    #album_artist_name_selector ~ .mdl-menu__container > .mdl-menu__outline, #album_artist_name_selector ~ .mdl-menu__container .mdl-menu {
+      width: 100% !important; }
+
+dialog {
+  top: 5vh; }
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+dialog {
+  width: 50vw !important;
+  max-width: 500px !important;
+  min-width: 250px !important; }
+
+.mdl-badge[data-badge]:after {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
+
+.mdl-menu > .mdl-menu__item > a {
+  width: 100%; }
+.mdl-menu > .mdl-menu__item a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: inherit; }
+
+.cards > .mdl-card {
+  overflow: visible;
+  margin-bottom: 30px !important; }
+  .cards > .mdl-card.mdl-badge {
+    margin-right: 8px; }
+  .cards > .mdl-card > .mdl-card__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .cards > .mdl-card > .mdl-card__supporting-text > .mdl-list {
+    padding: 0;
+    margin: 0; }
+    .cards > .mdl-card > .mdl-card__supporting-text > .mdl-list > .mdl-list__item {
+      padding: 0;
+      height: auto;
+      overflow: visible; }
+      .cards > .mdl-card > .mdl-card__supporting-text > .mdl-list > .mdl-list__item .mdl-list__item-avatar {
+        font-size: 16px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px; }
+
+/*# sourceMappingURL=main.css.map */

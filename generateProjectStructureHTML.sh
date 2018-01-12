@@ -12,6 +12,12 @@ for DIR in `find ${PUBLIC_HTML} -type d`; do
 	if [ `find ${DIR} -maxdepth 1 -type f | grep -o ".nogen_dir_structure"` ]; then
 		continue;
 	fi
+
+	if [ `echo "${DIR}" | grep -c "node_modules"` -gt 0 ]; then
+		continue;
+	fi
+	echo "${DIR}"
+
 	cd ${DIR}
 
 	DIR_NAME=$(basename `pwd`)

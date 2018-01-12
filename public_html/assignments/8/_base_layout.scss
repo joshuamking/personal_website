@@ -1,0 +1,72 @@
+html, body {
+    font-family : 'Roboto', 'Helvetica', sans-serif;
+}
+
+.content {
+    max-width : 1080px;
+    height    : 100vh;
+}
+
+@import "navigation";
+
+.cards {
+    align-items   : flex-start;
+    align-content : flex-start;
+}
+
+.cards .separator {
+    height : 32px;
+}
+
+.cards .mdl-card__title.mdl-card__title {
+    color       : white;
+    font-size   : 24px;
+    font-weight : 400;
+}
+
+.cards ul {
+    padding : 0;
+}
+
+.cards h3 {
+    font-size : 1em;
+}
+
+.updates .mdl-card__title {
+    min-height          : 200px;
+    background-position : 90% 100%;
+    background-repeat   : no-repeat;
+}
+
+.cards .mdl-card__actions a {
+    color           : #00BCD4;
+    text-decoration : none;
+}
+
+.options h3 {
+    margin : 0;
+}
+
+.options .mdl-checkbox__box-outline {
+    border-color : rgba(255, 255, 255, 0.89);
+}
+
+.options ul {
+    margin          : 0;
+    list-style-type : none;
+}
+
+.options li {
+    margin : 4px 0;
+}
+
+.options .material-icons {
+    color : rgba(255, 255, 255, 0.89);
+}
+
+.options .mdl-card__actions {
+    height      : 64px;
+    display     : flex;
+    box-sizing  : border-box;
+    align-items : center;
+}

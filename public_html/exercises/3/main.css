@@ -1,0 +1,54 @@
+html body {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around; }
+  html body form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+    background: #E0F7FA;
+    padding: 3vh 3vw;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.25);
+    transition: all 500ms ease; }
+    html body form:hover {
+      box-shadow: 2px 2px 25px 10px rgba(0, 0, 0, 0.25); }
+    html body form div.row {
+      display: block;
+      padding: 10px;
+      margin: 10px;
+      width: 100%; }
+      html body form div.row div.field {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px; }
+        html body form div.row div.field * {
+          width: 100%;
+          display: block; }
+        html body form div.row div.field label {
+          font-weight: bolder; }
+      html body form div.row select {
+        padding: 10px; }
+      html body form div.row select,
+      html body form div.row input {
+        -webkit-appearance: unset;
+        padding: 10px !important;
+        border-radius: 10px;
+        border: #00838F 2px solid;
+        box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.25);
+        transition: all 500ms ease; }
+        html body form div.row select:hover,
+        html body form div.row input:hover {
+          box-shadow: 4px 4px 7px 1px rgba(0, 0, 0, 0.25); }
+      html body form div.row input[type="submit"] {
+        border: none;
+        background: #795548;
+        font-weight: bolder;
+        font-size: 1.2em;
+        color: #FF9800;
+        cursor: pointer;
+        float: right; }
+
+/*# sourceMappingURL=main.css.map */

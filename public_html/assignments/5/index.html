@@ -1,15 +1,56 @@
 <!DOCTYPE html>
-		<html>
-		<head>
-		</head>
-		<body>
-<h1>5</h1>
-
-<br><br>
-					<h4>
-					&Uparrow; &MediumSpace;&MediumSpace; <a href="../">Go up one level</a>
-					<br>
-					🏠&MediumSpace;&MediumSpace;<a href="/~jking82/sitemap.html">jking82 - Home</a>
-					</h4>
+<!--suppress HtmlFormInputWithoutLabel -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Joshua King - Assignment 6a</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <form id="form_to_validate" action="javascript:validate(this)">
+        <table>
+            <tr>
+                <td></td>
+                <td><p id="forId" class="error">Please enter an ID</p></td>
+            </tr>
+            <tr>
+                <td><p>ID:</p></td>
+                <td><input pattern="[0-9]+" name="id" type="text" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="forFirstName" class="error">Please enter a First Name</p></td>
+            </tr>
+            <tr>
+                <td><p>First Name:</p></td>
+                <td><input pattern="[A-z]+" name="first_name" type="text" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p id="forLastName" class="error">Please enter a Last Name</p></td>
+            </tr>
+            <tr>
+                <td><p>Last Name:</p></td>
+                <td><input pattern="[A-z]+" name="last_name" type="text" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add" /></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <p id="form_data"></p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="extra-credit-details.html">Extra credit details</a>
 </body>
-		</html>
+</html>

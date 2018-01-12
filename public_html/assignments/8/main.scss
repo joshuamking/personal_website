@@ -1,0 +1,92 @@
+@import "material_colors";
+@import 'base_layout';
+//@import 'base_layout';
+
+#album_artist_name_selector {
+    text-transform  : initial;
+    font-weight     : inherit;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    width           : 100%;
+
+    & ~ {
+        .mdl-menu__container {
+            width : 100% !important;
+
+            & > .mdl-menu__outline, .mdl-menu {
+                width : 100% !important;
+            }
+        }
+    }
+}
+
+dialog {
+    top : 5vh;
+}
+
+dialog::backdrop {
+    background-color : rgba(0, 0, 0, 0.5);
+}
+
+dialog {
+    width     : 50vw !important;
+    max-width : 500px !important;
+    min-width : 250px !important;
+}
+
+.mdl-badge[data-badge]:after {
+    box-shadow : 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+}
+
+.mdl-menu {
+    > .mdl-menu__item {
+        > a {
+            width : 100%;
+        }
+        a {
+            color           : inherit;
+            text-decoration : none;
+            font-weight     : inherit;
+        }
+    }
+}
+
+.cards {
+
+    > .mdl-card {
+        overflow      : visible;
+        margin-bottom : 30px !important;
+
+        &.mdl-badge {
+            margin-right : 8px;
+        }
+
+        > .mdl-card__title {
+            display         : flex;
+            align-items     : center;
+            justify-content : space-between;
+        }
+        > .mdl-card__supporting-text {
+            > .mdl-list {
+                padding : 0;
+                margin  : 0;
+
+                > .mdl-list__item {
+                    padding  : 0;
+                    height   : auto;
+                    overflow : visible;
+
+                    .mdl-list__item-avatar {
+                        font-size       : 16px !important;
+                        display         : flex;
+                        align-items     : center;
+                        justify-content : center;
+                        height          : 30px;
+                        width           : 30px;
+                    }
+                }
+            }
+        }
+    }
+}

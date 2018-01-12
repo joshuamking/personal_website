@@ -1,0 +1,74 @@
+.layout {
+    .mdl-layout__header {
+        -webkit-transition : all 250ms ease;
+        -moz-transition    : all 250ms ease;
+        -o-transition      : all 250ms ease;
+        transition         : all 250ms ease;
+
+        &:not(.is-casting-shadow) {
+            background-color : $grey-100 !important;
+            color            : $grey-600 !important;
+
+            .mdl-layout__drawer-button {
+                color : $grey-600 !important;
+            }
+        }
+    }
+
+    .mdl-menu .mdl-menu__item {
+        display     : flex;
+        align-items : center;
+    }
+
+    .drawer {
+        border : none;
+
+        .mdl-menu__container {
+            z-index : -1;
+        }
+
+        .drawer-header {
+            box-sizing      : border-box;
+            display         : flex;
+            flex-direction  : column;
+            justify-content : flex-end;
+            padding         : 16px;
+            height          : 151px;
+
+            .avatar-dropdown {
+                display        : flex;
+                position       : relative;
+                flex-direction : row;
+                align-items    : center;
+                width          : 100%;
+            }
+        }
+
+        .navigation {
+            z-index   : -2;
+            flex-grow : 1;
+
+            .mdl-navigation__link {
+                display          : flex !important;
+                flex-direction   : row;
+                align-items      : center;
+                color            : rgba(255, 255, 255, 0.56);
+                font-weight      : 500;
+                background-color : rgba(0, 0, 0, 0);
+                transition       : all 250ms ease;
+                cursor           : pointer;
+
+                &:hover {
+                    background-color : #663FB4;
+                    //color            : rgba(255, 255, 255, 0.31);
+                }
+
+                .material-icons {
+                    font-size    : 24px;
+                    color        : rgba(255, 255, 255, 0.56);
+                    margin-right : 32px;
+                }
+            }
+        }
+    }
+}
